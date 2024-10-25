@@ -4,129 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Dolan - Professional Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            padding: 60px 0;
-            text-align: center;
-            background-color: #26a69a;
-            color: white;
-        }
-
-        .navbar {
-            background-color: #00796b;
-        }
-
-        .navbar .nav-wrapper a.brand-logo {
-            padding-left: 20px;
-        }
-
-        .section {
-            padding: 40px 0;
-        }
-
-        .project-card {
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #00796b;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800">
     <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Gabriel Dolan</h1>
-            <p>Data Scientist & Business Analyst</p>
+    <header class="bg-gradient-to-r from-teal-500 to-teal-700 text-white py-20 text-center shadow-lg">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-extrabold">Gabriel Dolan</h1>
+            <p class="mt-4 text-2xl font-light">Data Scientist & Business Analyst</p>
         </div>
     </header>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-wrapper container">
-            <a href="#" class="brand-logo">Portfolio</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <nav class="bg-teal-700 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-white text-lg font-semibold">Portfolio</a>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-white hover:text-teal-300 transition">About</a></li>
+                    <li><a href="#skills" class="text-white hover:text-teal-300 transition">Skills</a></li>
+                    <li><a href="#projects" class="text-white hover:text-teal-300 transition">Projects</a></li>
+                    <li><a href="#contact" class="text-white hover:text-teal-300 transition">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- About Section -->
-    <section id="about" class="section container">
-        <h2 class="teal-text text-darken-3">About Me</h2>
-        <p>I am a passionate data scientist with experience in data analysis, machine learning, and business analytics. My goal is to utilize data to drive innovation and create impactful solutions for businesses and communities.</p>
+    <section id="about" class="container mx-auto px-4 py-20">
+        <div class="bg-white rounded-lg shadow-lg p-10">
+            <h2 class="text-4xl font-bold text-teal-700 mb-6">About Me</h2>
+            <p class="text-lg leading-relaxed">I am a passionate data scientist with experience in data analysis, machine learning, and business analytics. My goal is to utilize data to drive innovation and create impactful solutions for businesses and communities.</p>
+        </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section container">
-        <h2 class="teal-text text-darken-3">Skills</h2>
-        <div class="row">
-            <div class="col s12 m6">
-                <ul class="collection with-header">
-                    <li class="collection-header"><h5>Technical Skills</h5></li>
-                    <li class="collection-item">Data Analysis & Visualization</li>
-                    <li class="collection-item">Machine Learning & Predictive Modeling</li>
-                    <li class="collection-item">Programming Languages: Python, R, SQL</li>
-                    <li class="collection-item">Data Analytics Tools: Power BI, Tableau</li>
-                    <li class="collection-item">Web Development: HTML, CSS, JavaScript</li>
+    <section id="skills" class="container mx-auto px-4 py-20">
+        <div class="bg-white rounded-lg shadow-lg p-10">
+            <h2 class="text-4xl font-bold text-teal-700 mb-6">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <ul class="list-disc ml-6">
+                    <li class="mb-3 text-lg">Data Analysis & Visualization</li>
+                    <li class="mb-3 text-lg">Machine Learning & Predictive Modeling</li>
+                    <li class="mb-3 text-lg">Programming Languages: Python, R, SQL</li>
+                    <li class="mb-3 text-lg">Data Analytics Tools: Power BI, Tableau</li>
+                    <li class="mb-3 text-lg">Web Development: HTML, CSS, JavaScript</li>
                 </ul>
+                <div class="flex items-center justify-center">
+                    <img src="https://via.placeholder.com/300" alt="Skills Illustration" class="rounded-lg shadow-md">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section container">
-        <h2 class="teal-text text-darken-3">Projects</h2>
-        <div class="row">
-            <div class="col s12 m6 l4">
-                <div class="card project-card">
-                    <div class="card-content">
-                        <span class="card-title">Cisco Logistics Analytics ML Model</span>
-                        <p>Built a machine learning model to predict on-time delivery hits and implemented metrics to improve demand fulfillment using Power BI and Excel. Awarded 1st place at Cisco's Annual Supply Chain Intern Project Showcase.</p>
-                    </div>
-                </div>
+    <section id="projects" class="container mx-auto px-4 py-20">
+        <h2 class="text-4xl font-bold text-teal-700 mb-10 text-center">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition hover:scale-105 hover:shadow-xl">
+                <h3 class="text-2xl font-semibold mb-4">Cisco Logistics Analytics ML Model</h3>
+                <p class="text-lg">Built a machine learning model to predict on-time delivery hits and implemented metrics to improve demand fulfillment using Power BI and Excel. Awarded 1st place at Cisco's Annual Supply Chain Intern Project Showcase.</p>
             </div>
-            <div class="col s12 m6 l4">
-                <div class="card project-card">
-                    <div class="card-content">
-                        <span class="card-title">Bloomberg BPuzzled Global Finalist</span>
-                        <p>Participated as a finalist in the Bloomberg BPuzzled competition, utilizing technical problem-solving skills to solve complex challenges collaboratively.</p>
-                    </div>
-                </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg transform transition hover:scale-105 hover:shadow-xl">
+                <h3 class="text-2xl font-semibold mb-4">Bloomberg BPuzzled Global Finalist</h3>
+                <p class="text-lg">Participated as a finalist in the Bloomberg BPuzzled competition, utilizing technical problem-solving skills to solve complex challenges collaboratively.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section container">
-        <h2 class="teal-text text-darken-3">Contact</h2>
-        <p>Email: <a href="mailto:gabriel.dolan@example.com">gabriel.dolan@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/gabriel-dolan" target="_blank">linkedin.com/in/gabriel-dolan</a></p>
+    <section id="contact" class="container mx-auto px-4 py-20">
+        <div class="bg-gradient-to-r from-teal-600 to-teal-800 text-white rounded-lg shadow-lg p-10">
+            <h2 class="text-4xl font-bold mb-6">Contact</h2>
+            <p class="text-lg mb-4">Email: <a href="mailto:gabriel.dolan@example.com" class="underline hover:text-teal-300">gabriel.dolan@example.com</a></p>
+            <p class="text-lg">LinkedIn: <a href="https://linkedin.com/in/gabriel-dolan" target="_blank" class="underline hover:text-teal-300">linkedin.com/in/gabriel-dolan</a></p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Gabriel Dolan. All rights reserved.</p>
+    <footer class="bg-teal-800 text-white py-10">
+        <div class="container mx-auto text-center">
+            <p class="text-lg">&copy; 2024 Gabriel Dolan. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-teal-300 hover:text-white transition"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="text-teal-300 hover:text-white transition"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="text-teal-300 hover:text-white transition"><i class="fab fa-github fa-2x"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- Materialize JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Font Awesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
-
