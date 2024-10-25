@@ -4,101 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriel Dolan - Professional Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
         }
+        .hero {
+            background: linear-gradient(to right, #00d1b2, #209cee);
+        }
+        .hero-body {
+            color: white;
+        }
+        .navbar {
+            background-color: #00d1b2;
+        }
+        .section {
+            padding: 4rem 1.5rem;
+        }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body>
     <!-- Header -->
-    <header class="bg-gradient-to-r from-teal-500 to-teal-700 text-white py-20 text-center shadow-lg">
-        <div class="container mx-auto">
-            <h1 class="text-5xl font-extrabold">Gabriel Dolan</h1>
-            <p class="mt-4 text-2xl font-light">Data Scientist & Business Analyst</p>
+    <section class="hero is-medium is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1">Gabriel Dolan</h1>
+                <p class="subtitle is-3">Data Scientist & Business Analyst</p>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Navbar -->
-    <nav class="bg-teal-700 shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <a href="#" class="text-white text-lg font-semibold">Portfolio</a>
-                <ul class="flex space-x-6">
-                    <li><a href="#about" class="text-white hover:text-teal-300 transition">About</a></li>
-                    <li><a href="#skills" class="text-white hover:text-teal-300 transition">Skills</a></li>
-                    <li><a href="#projects" class="text-white hover:text-teal-300 transition">Projects</a></li>
-                    <li><a href="#contact" class="text-white hover:text-teal-300 transition">Contact</a></li>
-                </ul>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">Portfolio</a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a href="#about" class="navbar-item">About</a>
+                    <a href="#skills" class="navbar-item">Skills</a>
+                    <a href="#projects" class="navbar-item">Projects</a>
+                    <a href="#contact" class="navbar-item">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- About Section -->
-    <section id="about" class="container mx-auto px-4 py-20">
-        <div class="bg-white rounded-lg shadow-lg p-10">
-            <h2 class="text-4xl font-bold text-teal-700 mb-6">About Me</h2>
-            <p class="text-lg leading-relaxed">I am a passionate data scientist with experience in data analysis, machine learning, and business analytics. My goal is to utilize data to drive innovation and create impactful solutions for businesses and communities.</p>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="title is-3 has-text-primary">About Me</h2>
+            <p class="content is-medium">I am a passionate data scientist with experience in data analysis, machine learning, and business analytics. My goal is to utilize data to drive innovation and create impactful solutions for businesses and communities.</p>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="container mx-auto px-4 py-20">
-        <div class="bg-white rounded-lg shadow-lg p-10">
-            <h2 class="text-4xl font-bold text-teal-700 mb-6">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <ul class="list-disc ml-6">
-                    <li class="mb-3 text-lg">Data Analysis & Visualization</li>
-                    <li class="mb-3 text-lg">Machine Learning & Predictive Modeling</li>
-                    <li class="mb-3 text-lg">Programming Languages: Python, R, SQL</li>
-                    <li class="mb-3 text-lg">Data Analytics Tools: Power BI, Tableau</li>
-                    <li class="mb-3 text-lg">Web Development: HTML, CSS, JavaScript</li>
-                </ul>
-                <div class="flex items-center justify-center">
-                    <img src="https://via.placeholder.com/300" alt="Skills Illustration" class="rounded-lg shadow-md">
+    <section id="skills" class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-3 has-text-primary">Skills</h2>
+            <div class="columns is-multiline">
+                <div class="column is-half">
+                    <div class="box">
+                        <p class="subtitle is-5"><i class="fas fa-chart-line"></i> Data Analysis & Visualization</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <p class="subtitle is-5"><i class="fas fa-brain"></i> Machine Learning & Predictive Modeling</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <p class="subtitle is-5"><i class="fas fa-code"></i> Programming Languages: Python, R, SQL</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <p class="subtitle is-5"><i class="fas fa-database"></i> Data Analytics Tools: Power BI, Tableau</p>
+                    </div>
+                </div>
+                <div class="column is-half">
+                    <div class="box">
+                        <p class="subtitle is-5"><i class="fas fa-globe"></i> Web Development: HTML, CSS, JavaScript</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container mx-auto px-4 py-20">
-        <h2 class="text-4xl font-bold text-teal-700 mb-10 text-center">Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            <div class="bg-white p-6 rounded-lg shadow-lg transform transition hover:scale-105 hover:shadow-xl">
-                <h3 class="text-2xl font-semibold mb-4">Cisco Logistics Analytics ML Model</h3>
-                <p class="text-lg">Built a machine learning model to predict on-time delivery hits and implemented metrics to improve demand fulfillment using Power BI and Excel. Awarded 1st place at Cisco's Annual Supply Chain Intern Project Showcase.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg transform transition hover:scale-105 hover:shadow-xl">
-                <h3 class="text-2xl font-semibold mb-4">Bloomberg BPuzzled Global Finalist</h3>
-                <p class="text-lg">Participated as a finalist in the Bloomberg BPuzzled competition, utilizing technical problem-solving skills to solve complex challenges collaboratively.</p>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="title is-3 has-text-primary has-text-centered">Projects</h2>
+            <div class="columns is-multiline">
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-4">Cisco Logistics Analytics ML Model</p>
+                            <p class="content">Built a machine learning model to predict on-time delivery hits and implemented metrics to improve demand fulfillment using Power BI and Excel. Awarded 1st place at Cisco's Annual Supply Chain Intern Project Showcase.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title is-4">Bloomberg BPuzzled Global Finalist</p>
+                            <p class="content">Participated as a finalist in the Bloomberg BPuzzled competition, utilizing technical problem-solving skills to solve complex challenges collaboratively.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container mx-auto px-4 py-20">
-        <div class="bg-gradient-to-r from-teal-600 to-teal-800 text-white rounded-lg shadow-lg p-10">
-            <h2 class="text-4xl font-bold mb-6">Contact</h2>
-            <p class="text-lg mb-4">Email: <a href="mailto:gabriel.dolan@example.com" class="underline hover:text-teal-300">gabriel.dolan@example.com</a></p>
-            <p class="text-lg">LinkedIn: <a href="https://linkedin.com/in/gabriel-dolan" target="_blank" class="underline hover:text-teal-300">linkedin.com/in/gabriel-dolan</a></p>
+    <section id="contact" class="section has-background-light">
+        <div class="container">
+            <h2 class="title is-3 has-text-primary">Contact</h2>
+            <p class="content is-medium">Email: <a href="mailto:gabriel.dolan@example.com" class="has-text-link">gabriel.dolan@example.com</a></p>
+            <p class="content is-medium">LinkedIn: <a href="https://linkedin.com/in/gabriel-dolan" target="_blank" class="has-text-link">linkedin.com/in/gabriel-dolan</a></p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-teal-800 text-white py-10">
-        <div class="container mx-auto text-center">
-            <p class="text-lg">&copy; 2024 Gabriel Dolan. All rights reserved.</p>
-            <div class="mt-4 flex justify-center space-x-4">
-                <a href="#" class="text-teal-300 hover:text-white transition"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#" class="text-teal-300 hover:text-white transition"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#" class="text-teal-300 hover:text-white transition"><i class="fab fa-github fa-2x"></i></a>
+    <footer class="footer has-background-dark">
+        <div class="content has-text-centered has-text-white">
+            <p>&copy; 2024 Gabriel Dolan. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="icon has-text-white"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#" class="icon has-text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="#" class="icon has-text-white"><i class="fab fa-github fa-2x"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Font Awesome for social media icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Activate the navbar burger toggle
+            const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if (navbarBurgers.length > 0) {
+                navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
